@@ -1,5 +1,5 @@
 //
-//  ExploreCardModels.swift
+//  ExploreCard.swift
 //  ANF Code Test
 //
 //  Created by Hyndavi on 11/2/25.

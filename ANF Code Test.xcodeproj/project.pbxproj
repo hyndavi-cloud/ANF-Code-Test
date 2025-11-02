@@ -16,7 +16,14 @@
 		3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */; };
 		3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */; };
 		41903CCD2EB7C6D400F053ED /* ANFExploreCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41903CCC2EB7C6D400F053ED /* ANFExploreCardCell.swift */; };
-		41903CCF2EB7C7C600F053ED /* ExploreCardModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41903CCE2EB7C7C600F053ED /* ExploreCardModels.swift */; };
+		41903CCF2EB7C7C600F053ED /* ExploreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41903CCE2EB7C7C600F053ED /* ExploreCard.swift */; };
+		41903CD12EB7D14300F053ED /* UIImageView+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41903CD02EB7D14300F053ED /* UIImageView+Async.swift */; };
+		41903CD32EB7D27C00F053ED /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41903CD22EB7D27C00F053ED /* ExploreViewModel.swift */; };
+		41903CD52EB7D29A00F053ED /* ExploreCardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41903CD42EB7D29A00F053ED /* ExploreCardRepository.swift */; };
+		41903CD72EB7D39800F053ED /* ExploreFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41903CD62EB7D39800F053ED /* ExploreFeatureTests.swift */; };
+		41903CD92EB7D43000F053ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41903CD82EB7D42D00F053ED /* Constants.swift */; };
+		41903CDB2EB7E72300F053ED /* UIImageViewAsyncExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41903CDA2EB7E72300F053ED /* UIImageViewAsyncExtensionTests.swift */; };
+		41903CDD2EB7E72A00F053ED /* ExploreCardRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41903CDC2EB7E72A00F053ED /* ExploreCardRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +50,14 @@
 		3E727EEB2672708B006C11AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardTableViewController.swift; sourceTree = "<group>"; };
 		41903CCC2EB7C6D400F053ED /* ANFExploreCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardCell.swift; sourceTree = "<group>"; };
-		41903CCE2EB7C7C600F053ED /* ExploreCardModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCardModels.swift; sourceTree = "<group>"; };
+		41903CCE2EB7C7C600F053ED /* ExploreCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCard.swift; sourceTree = "<group>"; };
+		41903CD02EB7D14300F053ED /* UIImageView+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Async.swift"; sourceTree = "<group>"; };
+		41903CD22EB7D27C00F053ED /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		41903CD42EB7D29A00F053ED /* ExploreCardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCardRepository.swift; sourceTree = "<group>"; };
+		41903CD62EB7D39800F053ED /* ExploreFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFeatureTests.swift; sourceTree = "<group>"; };
+		41903CD82EB7D42D00F053ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		41903CDA2EB7E72300F053ED /* UIImageViewAsyncExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewAsyncExtensionTests.swift; sourceTree = "<group>"; };
+		41903CDC2EB7E72A00F053ED /* ExploreCardRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCardRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +99,15 @@
 		3E727ED126727088006C11AC /* ANF Code Test */ = {
 			isa = PBXGroup;
 			children = (
-				3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */,
 				3E727ED226727088006C11AC /* AppDelegate.swift */,
 				3E727ED426727088006C11AC /* SceneDelegate.swift */,
+				3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */,
 				41903CCC2EB7C6D400F053ED /* ANFExploreCardCell.swift */,
-				41903CCE2EB7C7C600F053ED /* ExploreCardModels.swift */,
+				41903CCE2EB7C7C600F053ED /* ExploreCard.swift */,
+				41903CD22EB7D27C00F053ED /* ExploreViewModel.swift */,
+				41903CD42EB7D29A00F053ED /* ExploreCardRepository.swift */,
+				41903CD02EB7D14300F053ED /* UIImageView+Async.swift */,
+				41903CD82EB7D42D00F053ED /* Constants.swift */,
 				3E727ED826727088006C11AC /* Main.storyboard */,
 				3E727EDB2672708B006C11AC /* Assets.xcassets */,
 				3E727EDD2672708B006C11AC /* LaunchScreen.storyboard */,
@@ -103,6 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */,
+				41903CDC2EB7E72A00F053ED /* ExploreCardRepositoryTests.swift */,
+				41903CD62EB7D39800F053ED /* ExploreFeatureTests.swift */,
+				41903CDA2EB7E72300F053ED /* UIImageViewAsyncExtensionTests.swift */,
 				3E727EEB2672708B006C11AC /* Info.plist */,
 			);
 			path = "ANF Code TestTests";
@@ -209,11 +230,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41903CCF2EB7C7C600F053ED /* ExploreCardModels.swift in Sources */,
+				41903CCF2EB7C7C600F053ED /* ExploreCard.swift in Sources */,
 				3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */,
 				41903CCD2EB7C6D400F053ED /* ANFExploreCardCell.swift in Sources */,
+				41903CD92EB7D43000F053ED /* Constants.swift in Sources */,
 				3E727ED326727088006C11AC /* AppDelegate.swift in Sources */,
 				3E727ED526727088006C11AC /* SceneDelegate.swift in Sources */,
+				41903CD12EB7D14300F053ED /* UIImageView+Async.swift in Sources */,
+				41903CD32EB7D27C00F053ED /* ExploreViewModel.swift in Sources */,
+				41903CD52EB7D29A00F053ED /* ExploreCardRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41903CDB2EB7E72300F053ED /* UIImageViewAsyncExtensionTests.swift in Sources */,
+				41903CD72EB7D39800F053ED /* ExploreFeatureTests.swift in Sources */,
+				41903CDD2EB7E72A00F053ED /* ExploreCardRepositoryTests.swift in Sources */,
 				3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

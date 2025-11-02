@@ -17,7 +17,7 @@ final class ANFExploreCardCell: UITableViewCell {
     
     private let actionsStackView = UIStackView()
     private var actionURLs: [URL] = []
-
+    private var currentImageURL: URL?
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -58,8 +58,31 @@ final class ANFExploreCardCell: UITableViewCell {
         promoLabel.font = UIFont.systemFont(ofSize: 11)
         bottomDescriptionLabel.font = UIFont.systemFont(ofSize: 13)
         
-        heroImageView.setImage(from: card.backgroundImage) { _ in
+        if let nameOrURL = card.backgroundImage, nameOrURL.lowercased().hasPrefix("http") {
+            // REMOTE IMAGE
+            if let url = URL(string: nameOrURL) {
+                currentImageURL = url
+                heroImageView.image = nil // or a placeholder
+                URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+                    guard
+                        let self = self,
+                        let data = data,
+                        let image = UIImage(data: data),
+                        url == self.currentImageURL // prevent cell reuse issue
+                    else { return }
+                    DispatchQueue.main.async {
+                        self.heroImageView.image = image
+                    }
+                }.resume()
+            } else {
+                heroImageView.image = nil
             }
+        } else {
+            // LOCAL ASSET
+            currentImageURL = nil
+            heroImageView.setImage(from: card.backgroundImage) { _ in
+            }
+        }
          
         if let html = card.bottomDescription,
            let data = html.data(using: .utf8),
